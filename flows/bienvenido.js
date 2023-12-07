@@ -18,7 +18,7 @@ module.exports = addKeyword(EVENTS.WELCOME)
                 setTimeout(function () {
                     console.log("Han pasado 24 horas. Encendiendo el Bot");
                     return gotoFlow(timeout)
-                }, 4 * 60 * 60 * 1000); // 24 horas en milisegundos
+                }, 1 * 60 * 60 * 1000); // 24 horas en milisegundos
             }
         }
     )

@@ -7,10 +7,11 @@ module.exports = addKeyword(EVENTS.ACTION)
         if (currentGlobalState.status) {
             await globalState.update({status:false})
         }
-        else{
+        else {
             await globalState.update({status:true})
         }
     })
     .addAnswer(
         ["Te estamos contactando..."],
     )
+

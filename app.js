@@ -15,6 +15,7 @@ const traslados = require('./flows/traslados')
 const otros = require('./flows/otros')
 const horario = require('./flows/horario')
 const servicios = require('./flows/servicios')
+const timeout = require('./flows/timeout')
 
     const flows = [
       flowPrincipal,
@@ -25,7 +26,8 @@ const servicios = require('./flows/servicios')
       traslados,
       otros,
       horario,
-      servicios
+      servicios,
+      timeout
     ];
 
 
@@ -33,6 +35,7 @@ const main = async () => {
     const adapterDB = new MockAdapter()
     const adapterFlow = createFlow([bienvenido, agente, ...flows])
     const adapterProvider = createProvider(BaileysProvider)
+
 
 
     createBot(

@@ -8,7 +8,7 @@ module.exports = addKeyword('servicios')
         null,
     )
     .addAction(async (_, { flowDynamic }) => {
-        await flowDynamic('_Escribe el numero *0* para volver al menu principal_', )
+        await flowDynamic('_Escribe el numero *0* para volver al menu principal ⬅️_', )
         })
               .addAction({ capture: true }, async (ctx, { gotoFlow, fallback }) => {
                 const opcion = parseInt(ctx.body);

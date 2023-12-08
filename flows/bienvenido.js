@@ -1,5 +1,4 @@
 const { addKeyword, EVENTS } = require("@bot-whatsapp/bot");
-const vendedorFlow = require("./agente");
 const flowPrincipal1 = require("./flowPrincipal");
 const timeout = require("./timeout");
 

@@ -17,7 +17,7 @@ module.exports = addKeyword('requisitos')
         null,
     )
     .addAction(async (_, { flowDynamic }) => {
-        await flowDynamic('\nEs importante que envíes la información completa en cuanto estemos disponibles te atenderemos 😁🐾\n\n _Tambien puedes escribir el numero *0* para volver al menu principal_', )
+        await flowDynamic('*Es importante que envíes la información completa en cuanto estemos disponibles le atenderemos 😁🐾*\n\n_Tambien puedes escribir el numero *0* para volver al menu principal ⬅️_', )
         })
               .addAction({ capture: true }, async (ctx, { gotoFlow }) => {
                 const opcion = parseInt(ctx.body);

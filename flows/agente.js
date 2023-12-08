@@ -14,4 +14,3 @@ module.exports = addKeyword(EVENTS.ACTION)
     .addAnswer(
         ["Te estamos contactando..."],
     )
-

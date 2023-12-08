@@ -16,6 +16,7 @@ const otros = require('./flows/otros')
 const horario = require('./flows/horario')
 const servicios = require('./flows/servicios')
 const timeout = require('./flows/timeout')
+const asesor = require('./flows/asesor')
 
     const flows = [
       flowPrincipal,
@@ -27,7 +28,8 @@ const timeout = require('./flows/timeout')
       otros,
       horario,
       servicios,
-      timeout
+      timeout,
+      asesor
     ];
 
 

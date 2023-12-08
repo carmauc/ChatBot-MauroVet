@@ -6,7 +6,7 @@ module.exports = addKeyword(EVENTS.ACTION)
 
 .addAction(async (_, { flowDynamic }) => {
     await flowDynamic(['Buen día',
-    'Para consultas a domicilio cuéntanos para donde sería el servicio, para verificar costos, disponibilidad y cobertura\n\n*(incluye barrio y/o ubicación de Google) 📌🗺️*\n\n*Si ya eres cliente nuestro puedes dejarnos tu nombre completo y en cuanto estemos disponibles le atenderemos 😁🐾*' ,
+    'Déjanos tu nombre completo y el servicio que deseas adquirir y en cuanto estemos disponibles le atenderemos 😁🐾' ,
     '_Tambien puedes escribir el numero *0* para volver al menu principal ⬅️_'])
     })
     .addAction({ capture: true }, async (ctx, { gotoFlow }) => {

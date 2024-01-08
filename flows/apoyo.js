@@ -1,7 +1,8 @@
-const { addKeyword } = require("@bot-whatsapp/bot");
+const { addKeyword, EVENTS } = require("@bot-whatsapp/bot");
 const agente = require("./agente");
 
-module.exports = addKeyword('apoyo')
+
+module.exports = addKeyword(EVENTS.ACTION)
 .addAnswer(
     ['El certificado de apoyo es un documento expedido por un profesional en psicología dónde previa valoración y diagnóstico se certifica su mascota como apoyo emocional',
     '\n*(Este certificado no es exigido por ningún ente regulador para poder viajar con su mascota)*', 
@@ -18,15 +19,20 @@ module.exports = addKeyword('apoyo')
     '*TOTAL: $250.000 COP*',
         ]
 )
-.addAction(async (_, { flowDynamic }) => {
-    await flowDynamic('Si desea agendar la cita o tiene alguna inquietud dejanos tu nombre completo y en cuanto estemos disponibles le atenderemos 😁🐾\n\n_Tambien puedes escribir el numero *0* para volver al menu principal ⬅️_', )
-    })
-          .addAction({ capture: true }, async (ctx, { gotoFlow }) => {
+.addAction(async (ctx, { flowDynamic }) => {
+    await flowDynamic('Si desea agendar la cita o tiene alguna inquietud déjanos tu nombre completo y en cuanto estemos disponibles le atenderemos 😁🐾\n\n_También puedes escribir el numero *0* para volver al menu principal ⬅️_', )
+    }
+)
+    .addAction({capture: true}, async (ctx, { gotoFlow, state }) => {
             const opcion = parseInt(ctx.body);
             if (opcion == "0") {
                 return gotoFlow(require("./flowPrincipal"));
             }
-            else {
+            else{
+                await state.update({ name: ctx.body })
+                await state.update({ mensaje: 'Hola, en que podemos ayudarle?'});
+
                 return gotoFlow(agente)
             }
-        })
+        }
+)

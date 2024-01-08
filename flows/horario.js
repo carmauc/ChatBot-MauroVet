@@ -1,8 +1,8 @@
-const { addKeyword } = require("@bot-whatsapp/bot");
+const { addKeyword, EVENTS } = require("@bot-whatsapp/bot");
 
-module.exports = addKeyword('requisitos')
+module.exports = addKeyword(EVENTS.ACTION)
 .addAnswer(
-    ['HORARIOS DE ATENCIÓN ⏰🧑‍⚕️\n\n*Lunes a Sabado*: 10:00 am -6:00pm \n\n *Domingos y Festivos*: 2:00 pm - 6:00pm\n\n'],
+    ['HORARIOS DE ATENCIÓN ⏰🧑‍⚕️\n\n*Lunes a Sábado*: 10:00 am -6:00pm \n\n *Domingos y Festivos*: 2:00 pm - 6:00pm\n\n'],
         null,
         null,
     )

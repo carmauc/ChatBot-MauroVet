@@ -1,6 +1,6 @@
-const { addKeyword } = require("@bot-whatsapp/bot");
+const { addKeyword, EVENTS } = require("@bot-whatsapp/bot");
 
-module.exports = addKeyword('servicios')
+module.exports = addKeyword(EVENTS.ACTION)
 .addAnswer(
     ['🔹Nuestros servicios puedes consultarlos en: \n https://maurovet.com/servicios/ \n',
     '🔹Para testimonios y preguntas frecuentes sobre viajes de tu mascota visita: \nhttps://maurovet.com/viajes-mascotas/\n\n 🔹Instagram:\n https://instagram.com/mauro.vet\n\n'],

@@ -1,30 +1,32 @@
-const { addKeyword } = require("@bot-whatsapp/bot");
+const { addKeyword, EVENTS } = require("@bot-whatsapp/bot");
 const agente = require("./agente");
+const eeuu = require("./eeuu");
+const europa = require("./europa");
 
-module.exports = addKeyword('requisitos')
+module.exports = addKeyword(EVENTS.ACTION)
 .addAnswer(
-    ['Para asesoría sobre requisitos nacionales, internacionales y costos indícanos por favor:\n\n', 
-    '- Nombre Completo (Cliente)',    
-    '- Ciudad Origen',
-    '- Tipo de Viaje (Internacional o Nacional)',
-    '- País de destino ',
-    '- Fecha estimada de viaje',
-    '- Cantidad de Mascotas',
-    '- Tipo de Mascota (perro o gato)',
-    '- Edad de la Mascota',
-        ],
-        null,
-        null,
+    '¿Cual es tu Nombre Completo?',
+    {
+        capture: true,
+    },
+    async (ctx, { flowDynamic, state }) => {
+        await state.update({ name: ctx.body })
+        flowDynamic('Gracias por tu nombre!')
+    }
+)
+.addAction(async (_, { flowDynamic }) => {
+    await flowDynamic('¡ Cual es tu país de Destino 👇\n\n *1.* EEUU 🇺🇸\n\n *2.* Países de la Union Europea 🇪🇺\n\n *3.* Otro');
+    })
+    .addAction({ capture: true }, async (ctx, { gotoFlow }) => {
+      const opcion = parseInt(ctx.body);
+      switch (opcion) {
+        case 1: 
+        return gotoFlow(eeuu);
+        case 2: 
+        return gotoFlow(europa);
+        case 3: 
+        await state.update({ mensaje: 'Hola buen dia,\nPara asesoría sobre requisitos nacionales, internacionales y costos indícanos por favor:\n\n- Nombre Completo (Cliente)\n- Ciudad Origen\n- País de destino\n- Fecha estimada de viaje\n- Tipo de Mascota (perro o gato)\n- Edad de la Mascota\n\n En un momento estaré con usted',})
+        return gotoFlow(agente);
+      }
+    },
     )
-    .addAction(async (_, { flowDynamic }) => {
-        await flowDynamic('*Es importante que envíes la información completa en cuanto estemos disponibles le atenderemos 😁🐾*\n\n_Tambien puedes escribir el numero *0* para volver al menu principal ⬅️_', )
-        })
-              .addAction({ capture: true }, async (ctx, { gotoFlow }) => {
-                const opcion = parseInt(ctx.body);
-                if (opcion == "0") {
-                    return gotoFlow(require("./flowPrincipal"));
-                }
-                else {
-                    return gotoFlow(agente)
-                }
-            })

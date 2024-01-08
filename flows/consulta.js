@@ -5,16 +5,18 @@ const agente = require("./agente");
 module.exports = addKeyword(EVENTS.ACTION)
 
 .addAction(async (_, { flowDynamic }) => {
-    await flowDynamic(['Buen día',
-    'Para consultas a domicilio cuéntanos para donde sería el servicio, para verificar costos, disponibilidad y cobertura\n\n*(incluye barrio y/o ubicación de Google) 📌🗺️*\n\n*Si ya eres cliente nuestro puedes dejarnos tu nombre completo y en cuanto estemos disponibles le atenderemos 😁🐾*' ,
-    '_Tambien puedes escribir el numero *0* para volver al menu principal ⬅️_'])
+    await flowDynamic([
+    'Indícanos por favor tu *Nombre*' ,
+    '_También puedes escribir el numero *0* para volver al menu principal ⬅️_'])
     })
-    .addAction({ capture: true }, async (ctx, { gotoFlow }) => {
+    .addAction({ capture: true }, async (ctx, { gotoFlow, state }) => {
         const opcion = parseInt(ctx.body);
         if (opcion == "0") {
             return gotoFlow(require("./flowPrincipal"));
         }
         else {
-            return gotoFlow(agente)
+            await state.update({ name: ctx.body });
+            await state.update({ mensaje: 'Hola, en que podemos ayudarle?\n\n _Recuerda que para atención a domicilio debes informarnos para donde sería el servicio, para verificar costos, disponibilidad y cobertura_\n\n*(incluye barrio y/o ubicación de Google) 📌🗺️*'});
+            return gotoFlow(agente)            
         }
     })

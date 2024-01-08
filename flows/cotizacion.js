@@ -38,7 +38,7 @@ module.exports = addKeyword(EVENTS.ACTION)
             .addAction(async (_, { flowDynamic }) => {
                 await flowDynamic('*1.* Continuar con asesor ⏩\n\n*2.* Volver al menu principal ⬅️', )
                 })
-                      .addAction({ capture: true }, async (ctx, { gotoFlow }) => {
+                      .addAction({ capture: true }, async (ctx, { gotoFlow, state}) => {
                         const opcion = parseInt(ctx.body);
                   switch (opcion) {
                     case 1: 

@@ -14,7 +14,7 @@ const delay = (ms) => new Promise((res) => setTimeout(res, ms));
       // const country = state.get('country')
       const name = state.get('name')
       const mensaje = state.get('mensaje')
-      const groupName = `MauroVet - ${name} (${ID_GROUP})`;
+      const groupName = `MauroVet-${name} (${ID_GROUP})`;
       const id = `${ctx.from}@s.whatsapp.net`;
       const group = await refProvider.groupCreate(groupName, [id]);
       await provider.sendText(group.id, `${mensaje}`);

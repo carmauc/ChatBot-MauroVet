@@ -1,7 +1,7 @@
 const { addKeyword, EVENTS } = require("@bot-whatsapp/bot");
 const agente = require("./agente");
 
-module.exports = addKeyword("asesor", { sensitive: true })
+module.exports = addKeyword("Asesor", { sensitive: true })
 .addAnswer(
     '¿Cual es tu Nombre?',
     {

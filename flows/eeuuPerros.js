@@ -15,7 +15,7 @@ module.exports = addKeyword(EVENTS.ACTION)
 .addAction(async (_, { flowDynamic }) => {
         await flowDynamic('Selecciona una opción:\n\n *1.* Precios 💵\n\n *2.* Hablar con un Asesor 👨‍💻\n\n *3.* Volver al Menú Principal ⬅️');
         })
-        .addAction({ capture: true }, async (ctx, { gotoFlow }) => {
+        .addAction({ capture: true }, async (ctx, { gotoFlow, state }) => {
           const opcion = parseInt(ctx.body);
           switch (opcion) {
             case 1: return gotoFlow(precios);

@@ -1,7 +1,5 @@
 const { addKeyword, EVENTS } = require("@bot-whatsapp/bot");
 const agente = require("./agente");
-const flowPrincipal = require("./flowPrincipal");
-
 
 module.exports = addKeyword(EVENTS.ACTION)
 .addAnswer(
@@ -23,6 +21,16 @@ module.exports = addKeyword(EVENTS.ACTION)
      '_*El costo del domicilio para aplicación de vacunas o implantación de microchip puede variar dependiendo la localidad*_'
     ]
     )
-    .addAnswer(
-      'Esperamos haberle ayudado, si tiene alguna inquietud adicional o deseas adquirir un servicio puedes escribir la palabra "*asesor*" en cualquier momento y en breve estaremos con usted.\n\nLe deseamos un excelente día 🐱🐶',
-        );
+    .addAction(async (_, { flowDynamic }) => {
+      await flowDynamic('Selecciona una opción:\n\n *1.* Hablar con un Asesor 👨‍💻\n\n *2.* Volver al Menú Principal ⬅️');
+      })
+      .addAction({ capture: true }, async (ctx, { gotoFlow, state }) => {
+        const opcion = parseInt(ctx.body);
+        switch (opcion) {
+          case 1: 
+          await state.update({ mensaje: 'Hola, en que podemos ayudarle?'});
+          return gotoFlow(agente);
+          case 2: return gotoFlow(require("./flowPrincipal"));
+        }
+      },
+      )

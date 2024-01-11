@@ -9,6 +9,7 @@ module.exports = addKeyword("Asesor", { sensitive: true })
     },
     async (ctx, { gotoFlow, flowDynamic, state }) => {
         await state.update({ mensaje: 'Hola, en que podemos ayudarle?'});
+        await state.update({ country: 'Asesoría Viajes'});
         await state.update({ name: ctx.body })
         flowDynamic('Gracias por tu nombre!')
         return gotoFlow(agente)

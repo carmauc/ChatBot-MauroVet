@@ -42,6 +42,7 @@ module.exports = addKeyword(EVENTS.ACTION)
                         const opcion = parseInt(ctx.body);
                   switch (opcion) {
                     case 1: 
+                    await state.update({ country: 'Traslado'});
                     await state.update({ mensaje: 'Buena dia, en un momento estaré con usted. Recuerda compartirnos los datos para el traslado por este chat.'});
                     return gotoFlow(agente);
                     case 2: return gotoFlow(require("./flowPrincipal"));

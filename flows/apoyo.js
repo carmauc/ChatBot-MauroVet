@@ -30,6 +30,7 @@ module.exports = addKeyword(EVENTS.ACTION)
             }
             else{
                 await state.update({ name: ctx.body })
+                await state.update({ country: 'Apoyo Emocional'});
                 await state.update({ mensaje: 'Hola, en que podemos ayudarle?'});
 
                 return gotoFlow(agente)

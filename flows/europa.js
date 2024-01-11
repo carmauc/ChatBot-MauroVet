@@ -18,8 +18,11 @@ module.exports = addKeyword(EVENTS.ACTION)
         .addAction({ capture: true }, async (ctx, { gotoFlow, state }) => {
           const opcion = parseInt(ctx.body);
           switch (opcion) {
-            case 1: return gotoFlow(precios);
+            case 1: 
+            await state.update({ country: 'UE'});
+            return gotoFlow(precios);
             case 2: 
+            await state.update({ country: 'Asesoría Viajes'});
             await state.update({ mensaje: 'Hola, en que podemos ayudarle?'});
             return gotoFlow(agente);
             case 3: return gotoFlow(require("./flowPrincipal"));

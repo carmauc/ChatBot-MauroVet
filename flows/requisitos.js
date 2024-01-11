@@ -21,10 +21,13 @@ module.exports = addKeyword(EVENTS.ACTION)
       const opcion = parseInt(ctx.body);
       switch (opcion) {
         case 1: 
+        await state.update({ country:'EEUU'})
         return gotoFlow(eeuu);
         case 2: 
+        await state.update({ country:'UE'})
         return gotoFlow(europa);
         case 3: 
+        await state.update({ country:'Otro'})
         await state.update({ mensaje: 'Hola buen dia,\nPara asesoría sobre requisitos nacionales, internacionales y costos indícanos por favor:\n\n- Nombre Completo (Cliente)\n- Ciudad Origen\n- País de destino\n- Fecha estimada de viaje\n- Tipo de Mascota (perro o gato)\n- Edad de la Mascota\n\n En un momento estaré con usted'})
         return gotoFlow(agente);
       }

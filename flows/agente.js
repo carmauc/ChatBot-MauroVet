@@ -16,7 +16,18 @@ const delay = (ms) => new Promise((res) => setTimeout(res, ms));
       const mensaje = state.get('mensaje')
       const groupName = `MauroVet-${name} (${ID_GROUP})`;
       const id = `${ctx.from}@s.whatsapp.net`;
-      const group = await refProvider.groupCreate(groupName, [id]);
-      await provider.sendText(group.id, `${mensaje}`);
+      const group = await refProvider.groupCreate(groupName, [id, '573138353149@s.whatsapp.net']);
+      refProvider.sendMessage(group.id, { text: `${mensaje}` }) // say hello to everyone on the group
+
+
+      // const response = await sock.groupAcceptInviteV4(id, groupInviteMessage)
+      // console.log("joined to: " + response)
+//       const metadata = await refProvider.groupMetadata(group) 
+// console.log(metadata.id + ", title: " + metadata.subject + ", description: " + metadata.desc)
+// const response = await refProvider.groupParticipantsUpdate(, 
+//   [id],
+//   "add" // replace this parameter with "remove", "demote" or "promote"
+// )
+
 
 })

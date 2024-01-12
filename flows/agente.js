@@ -2,10 +2,9 @@ const { addKeyword, EVENTS } = require("@bot-whatsapp/bot");
 const {join} = require('path')
 const delay = (ms) => new Promise((res) => setTimeout(res, ms));
 
-
     module.exports = addKeyword(EVENTS.ACTION)
     .addAnswer(
-     "Te hemos agregado a un grupo con un asesor!\nDéjanos tus preguntas en el nuevo chat y en breve estaremos con usted\n\n *Gracias por Comunicarte con MauroVet😄🐾*"
+     "Hemos creado un grupo con un asesor!\n\nDéjanos tus preguntas en el nuevo chat y en breve estaremos con usted\n\n *Gracias por Comunicarte con MauroVet😄🐾*"
     )
     .addAction(async (ctx, {flowDynamic, provider, state}) => {
       const nanoid = await import('nanoid')
@@ -20,21 +19,13 @@ const delay = (ms) => new Promise((res) => setTimeout(res, ms));
       const grupo = await refProvider.groupCreate(groupName, [id]);
       const code = await refProvider.groupInviteCode(grupo.id)
       // console.log("group code: " + code)
-      await flowDynamic(`Grupo con asesor:\n\nhttps://chat.whatsapp.com/${code}`);
+      await flowDynamic(`Presiona este link para ingresar al chat con el asesor 👇:\n\nhttps://chat.whatsapp.com/${code}`);
+      await refProvider.updateProfilePicture(grupo.id, {url:'./call.png'})
       await refProvider.groupUpdateDescription(grupo.id, `${country}`)
 
 
       // refProvider.sendMessage(group.id, { text: `${mensaje}` }) // say hello to everyone on the group
 
-
-      // const response = await sock.groupAcceptInviteV4(id, groupInviteMessage)
-      // console.log("joined to: " + response)
-//       const metadata = await refProvider.groupMetadata(group) 
-// console.log(metadata.id + ", title: " + metadata.subject + ", description: " + metadata.desc)
-// const response = await refProvider.groupParticipantsUpdate(, 
-//   [id],
-//   "add" // replace this parameter with "remove", "demote" or "promote"
-// )
 
 
 });

@@ -4,7 +4,7 @@ const delay = (ms) => new Promise((res) => setTimeout(res, ms));
 
     module.exports = addKeyword(EVENTS.ACTION)
     .addAnswer(
-     "Hemos creado un grupo con un asesor!\n\nDéjanos tus preguntas en el nuevo chat y en breve estaremos con usted\n\n *Gracias por Comunicarte con MauroVet😄🐾*"
+     "Hemos creado un grupo con un asesor!\n\n *Gracias por Comunicarte con MauroVet😄🐾*"
     )
     .addAction(async (ctx, {flowDynamic, provider, state}) => {
       const nanoid = await import('nanoid')

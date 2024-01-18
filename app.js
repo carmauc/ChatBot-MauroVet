@@ -1,4 +1,7 @@
 require("dotenv").config();
+const express = require("express");
+const { join } = require("path");
+const { createReadStream } = require("fs");
 const { createBot, createProvider, createFlow, addKeyword, EVENTS, } = require('@bot-whatsapp/bot')
 const QRPortalWeb = require('@bot-whatsapp/portal')
 const BaileysProvider = require('@bot-whatsapp/provider/baileys')
@@ -21,6 +24,9 @@ const eeuuGatos = require("./flows/eeuuGatos");
 const europa = require("./flows/europa");
 const cotizacion = require("./flows/cotizacion");
 const filtro = require("./flows/filtro");
+
+const app = express();
+
 
     const flows = [
       flowPrincipal,
@@ -63,7 +69,19 @@ const main = async () => {
     }
     );
 
-    QRPortalWeb()
-}
+    // QRPortalWeb()
+    app.get("/get-qr", async (_, res) => {
+      const YOUR_PATH_QR = join(process.cwd(), `bot.qr.png`);
+      const fileStream = createReadStream(YOUR_PATH_QR);
+  
+      res.writeHead(200, { "Content-Type": "image/png" });
+      fileStream.pipe(res);
+    });
+  
+    const PORT = process.env.PORT || 4000;
+    app.listen(PORT, () => console.log(`http://localhost:${PORT}`));
+  };
+
+  
 
 main()

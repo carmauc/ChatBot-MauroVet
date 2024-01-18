@@ -2,10 +2,10 @@
   key: {
     remoteJid: '573128135693@s.whatsapp.net',
     fromMe: false,
-    id: '3A5624DD0B7EBFBD1509',
+    id: '3A971D5727154406B810',
     participant: undefined
   },
-  messageTimestamp: 1705103138,
+  messageTimestamp: 1705611348,
   pushName: 'Mauricio Correa',
   broadcast: false,
   message: Message {
@@ -19,8 +19,8 @@
   from: '573128135693'
 }
 [QUEUE_SE_ENVIO]:  {
-  ref: 'ans_0b9b14f2-1125-4f62-ab6e-db86b93a36ce',
-  keyword: 'key_3dec9db1-b600-4220-a056-1e0f9fec4ad1',
+  ref: 'ans_d36f1165-7543-419f-84c8-8743f9aaedaa',
+  keyword: 'key_4e1ef92a-40e2-4582-bdcb-caf5b6964ba6',
   answer: '__call_action__',
   options: {
     media: null,
@@ -34,11 +34,11 @@
     keyword: {},
     callback: true
   },
-  refSerialize: 'ce6938935825ce7e9237ca007610c38c'
+  refSerialize: '857a6970dbcedaed22633e82ba24fb01'
 }
 [QUEUE_SE_ENVIO]:  {
-  ref: 'ans_563ec1d5-ba40-4028-bb00-3b20ad6957cd',
-  keyword: 'ans_0b9b14f2-1125-4f62-ab6e-db86b93a36ce',
+  ref: 'ans_206e6405-443d-4879-a4c1-bc507a9c37f5',
+  keyword: 'ans_d36f1165-7543-419f-84c8-8743f9aaedaa',
   answer: '__capture_only_intended__',
   options: {
     media: null,
@@ -52,65 +52,45 @@
     keyword: {},
     callback: true
   },
-  refSerialize: '42aebacfe304572acf99f556b844950c'
+  refSerialize: '41089d6dbb9d05214b80aa924724cc3a'
 }
 [handleMsg]:  {
   key: {
     remoteJid: '573128135693@s.whatsapp.net',
     fromMe: false,
-    id: '3A2E919919E9EB81532D',
+    id: '3AC4E87FB8B1DADC80C6',
     participant: undefined
   },
-  messageTimestamp: 1705103142,
+  messageTimestamp: 1705611354,
   pushName: 'Mauricio Correa',
   broadcast: false,
   message: Message {
-    conversation: '3',
+    conversation: '1',
     messageContextInfo: MessageContextInfo {
       deviceListMetadata: [DeviceListMetadata],
       deviceListMetadataVersion: 2
     }
   },
-  body: '3',
+  body: '1',
   from: '573128135693'
 }
 [handleMsg]:  {
   key: {
     remoteJid: '573128135693@s.whatsapp.net',
     fromMe: false,
-    id: '3A1329FC821EA37ED532',
+    id: '3A77DA8FC7000F416457',
     participant: undefined
   },
-  messageTimestamp: 1705103144,
+  messageTimestamp: 1705611358,
   pushName: 'Mauricio Correa',
   broadcast: false,
   message: Message {
-    conversation: '3',
+    conversation: 'Mauro',
     messageContextInfo: MessageContextInfo {
       deviceListMetadata: [DeviceListMetadata],
       deviceListMetadataVersion: 2
     }
   },
-  body: '3',
-  from: '573128135693'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '573128135693@s.whatsapp.net',
-    fromMe: false,
-    id: '3AB98EBFAA12B4D2721F',
-    participant: undefined
-  },
-  messageTimestamp: 1705103146,
-  pushName: 'Mauricio Correa',
-  broadcast: false,
-  message: Message {
-    conversation: 'Carlos',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2
-    }
-  },
-  body: 'Carlos',
+  body: 'Mauro',
   from: '573128135693'
 }

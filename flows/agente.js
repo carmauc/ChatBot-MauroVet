@@ -4,7 +4,7 @@ const delay = (ms) => new Promise((res) => setTimeout(res, ms));
 
     module.exports = addKeyword(EVENTS.ACTION)
     .addAnswer(
-     "Hemos creado un grupo con un asesor!👨‍💻*"
+     "Hemos creado un grupo con un asesor!👨‍💻"
     )
     .addAction(async (ctx, {flowDynamic, provider, state}) => {
       const nanoid = await import('nanoid')
@@ -19,7 +19,7 @@ const delay = (ms) => new Promise((res) => setTimeout(res, ms));
       const grupo = await refProvider.groupCreate(groupName, [id]);
       const code = await refProvider.groupInviteCode(grupo.id)
       // console.log("group code: " + code)
-      await flowDynamic(`Presiona este link para ingresar al chat con el asesor 👇:\n\nhttps://chat.whatsapp.com/${code}`);
+      await flowDynamic(`*Presiona este link para ingresar al chat con el asesor* 👇:\n\nhttps://chat.whatsapp.com/${code}`);
       await refProvider.updateProfilePicture(grupo.id, {url:'./call.png'})
       await refProvider.groupUpdateDescription(grupo.id, `${country}`)
       // refProvider.sendMessage(group.id, { text: `${mensaje}` }) // say hello to everyone on the group

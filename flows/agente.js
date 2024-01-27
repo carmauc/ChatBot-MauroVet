@@ -4,7 +4,7 @@ const delay = (ms) => new Promise((res) => setTimeout(res, ms));
 
     module.exports = addKeyword(EVENTS.ACTION)
     .addAnswer(
-     "Hemos creado un grupo con un asesor!*👨‍💻"
+     "Hemos creado un grupo con un asesor!👨‍💻*"
     )
     .addAction(async (ctx, {flowDynamic, provider, state}) => {
       const nanoid = await import('nanoid')
@@ -25,6 +25,6 @@ const delay = (ms) => new Promise((res) => setTimeout(res, ms));
       // refProvider.sendMessage(group.id, { text: `${mensaje}` }) // say hello to everyone on the group
 })
 .addAnswer(
-     "Recuerda que nuestro Horario de Atencion⏰ es de\n*Lunes-Sábado*: 10:00am-6:00pm\n\n*Domingos*: 2:00pm-6:00pm*"
+     "Recuerda que nuestro Horario de Atención ⏰ es de:\n\n*Lunes-Sábado*: 10:00am-6:00pm\n*Domingos*: 2:00pm-6:00pm"
     );
 

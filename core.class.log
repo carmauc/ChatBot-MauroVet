@@ -2,106 +2,10 @@
   key: {
     remoteJid: '573128135693@s.whatsapp.net',
     fromMe: false,
-    id: '3A4387F2F7B1C6263512',
+    id: '3A4DE34F4D8BD6090EAD',
     participant: undefined
   },
-  messageTimestamp: 1705777836,
-  pushName: 'Mauricio Correa',
-  broadcast: false,
-  message: Message {
-    conversation: 'Hooa',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2
-    }
-  },
-  body: 'Hooa',
-  from: '573128135693'
-}
-[QUEUE_SE_ENVIO]:  {
-  ref: 'ans_ba97d9ce-3765-4cfa-a4d7-fb37fbb1edf0',
-  keyword: 'key_e42861b2-5d30-4974-9d42-5be1ea068c9c',
-  answer: '__call_action__',
-  options: {
-    media: null,
-    buttons: [],
-    capture: false,
-    child: null,
-    delay: 0,
-    idle: null,
-    ref: null,
-    nested: [],
-    keyword: {},
-    callback: true
-  },
-  refSerialize: '2a2ea2ec07d5017250afe17607d2821d'
-}
-[QUEUE_SE_ENVIO]:  {
-  ref: 'ans_79035b1a-876d-4734-bab7-afad5ee36c0f',
-  keyword: 'ans_ba97d9ce-3765-4cfa-a4d7-fb37fbb1edf0',
-  answer: '__capture_only_intended__',
-  options: {
-    media: null,
-    buttons: [],
-    capture: true,
-    child: null,
-    delay: 0,
-    idle: null,
-    ref: null,
-    nested: [],
-    keyword: {},
-    callback: true
-  },
-  refSerialize: '8e8678eb8a9e0414e785031342e0c031'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '573128135693@s.whatsapp.net',
-    fromMe: false,
-    id: '3A6A3B79978214B8C94D',
-    participant: undefined
-  },
-  messageTimestamp: 1705777838,
-  pushName: 'Mauricio Correa',
-  broadcast: false,
-  message: Message {
-    conversation: '1',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2
-    }
-  },
-  body: '1',
-  from: '573128135693'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '573128135693@s.whatsapp.net',
-    fromMe: false,
-    id: '3A103BA0BD78904BA2DE',
-    participant: undefined
-  },
-  messageTimestamp: 1705777843,
-  pushName: 'Mauricio Correa',
-  broadcast: false,
-  message: Message {
-    conversation: 'Mauro',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2
-    }
-  },
-  body: 'Mauro',
-  from: '573128135693'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '573128135693@s.whatsapp.net',
-    fromMe: false,
-    id: '3ABD5C9057E334085CCE',
-    participant: undefined
-  },
-  messageTimestamp: 1705777857,
+  messageTimestamp: 1706463624,
   pushName: 'Mauricio Correa',
   broadcast: false,
   message: Message {
@@ -115,8 +19,8 @@
   from: '573128135693'
 }
 [QUEUE_SE_ENVIO]:  {
-  ref: 'ans_ba97d9ce-3765-4cfa-a4d7-fb37fbb1edf0',
-  keyword: 'key_e42861b2-5d30-4974-9d42-5be1ea068c9c',
+  ref: 'ans_0a9780a0-a6da-47d4-8513-4c6546fbb5d7',
+  keyword: 'key_b36c4b9a-a010-4e6c-92c3-8711e79fce53',
   answer: '__call_action__',
   options: {
     media: null,
@@ -130,11 +34,11 @@
     keyword: {},
     callback: true
   },
-  refSerialize: '2a2ea2ec07d5017250afe17607d2821d'
+  refSerialize: '9146bdae14446f652aa715a59b5ffe11'
 }
 [QUEUE_SE_ENVIO]:  {
-  ref: 'ans_79035b1a-876d-4734-bab7-afad5ee36c0f',
-  keyword: 'ans_ba97d9ce-3765-4cfa-a4d7-fb37fbb1edf0',
+  ref: 'ans_8a8663b9-8878-4dba-9428-1068b3bd3ed5',
+  keyword: 'ans_0a9780a0-a6da-47d4-8513-4c6546fbb5d7',
   answer: '__capture_only_intended__',
   options: {
     media: null,
@@ -148,36 +52,16 @@
     keyword: {},
     callback: true
   },
-  refSerialize: '8e8678eb8a9e0414e785031342e0c031'
+  refSerialize: '3dce3a4e5cd9d1f7d1f99092d5cc64e0'
 }
 [handleMsg]:  {
   key: {
     remoteJid: '573128135693@s.whatsapp.net',
     fromMe: false,
-    id: '3A3F0539E8DE49DCFB6E',
+    id: '3AF248E3D0ED02E47B6A',
     participant: undefined
   },
-  messageTimestamp: 1705777900,
-  pushName: 'Mauricio Correa',
-  broadcast: false,
-  message: Message {
-    conversation: '3',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2
-    }
-  },
-  body: '3',
-  from: '573128135693'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '573128135693@s.whatsapp.net',
-    fromMe: false,
-    id: '3A0B0928200AE5FC2D00',
-    participant: undefined
-  },
-  messageTimestamp: 1705777905,
+  messageTimestamp: 1706463626,
   pushName: 'Mauricio Correa',
   broadcast: false,
   message: Message {
@@ -189,4 +73,216 @@
   },
   body: '1',
   from: '573128135693'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '573128135693@s.whatsapp.net',
+    fromMe: false,
+    id: '3A8EDC93853EEBEBD837',
+    participant: undefined
+  },
+  messageTimestamp: 1706463629,
+  pushName: 'Mauricio Correa',
+  broadcast: false,
+  message: Message {
+    conversation: 'Mm',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'Mm',
+  from: '573128135693'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '573128135693@s.whatsapp.net',
+    fromMe: false,
+    id: '3A112AD885403C802AE4',
+    participant: undefined
+  },
+  messageTimestamp: 1706463662,
+  pushName: 'Mauricio Correa',
+  broadcast: false,
+  message: Message {
+    conversation: 'Hola',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'Hola',
+  from: '573128135693'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_0a9780a0-a6da-47d4-8513-4c6546fbb5d7',
+  keyword: 'key_b36c4b9a-a010-4e6c-92c3-8711e79fce53',
+  answer: '__call_action__',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: '9146bdae14446f652aa715a59b5ffe11'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_8a8663b9-8878-4dba-9428-1068b3bd3ed5',
+  keyword: 'ans_0a9780a0-a6da-47d4-8513-4c6546fbb5d7',
+  answer: '__capture_only_intended__',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: '3dce3a4e5cd9d1f7d1f99092d5cc64e0'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '573128135693@s.whatsapp.net',
+    fromMe: false,
+    id: '3A5623608DB8024B2414',
+    participant: undefined
+  },
+  messageTimestamp: 1706463665,
+  pushName: 'Mauricio Correa',
+  broadcast: false,
+  message: Message {
+    conversation: '1',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: '1',
+  from: '573128135693'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '573128135693@s.whatsapp.net',
+    fromMe: false,
+    id: '3A09D7FA1033C7405EE5',
+    participant: undefined
+  },
+  messageTimestamp: 1706463669,
+  pushName: 'Mauricio Correa',
+  broadcast: false,
+  message: Message {
+    conversation: 'Vegueta',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'Vegueta',
+  from: '573128135693'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '573135531984@s.whatsapp.net',
+    fromMe: false,
+    id: '3A3C0DFB7E756F952B22',
+    participant: undefined
+  },
+  messageTimestamp: 1706463981,
+  pushName: 'Juan José Naranjo',
+  broadcast: false,
+  message: Message {
+    conversation: 'Hola',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'Hola',
+  from: '573135531984'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_0a9780a0-a6da-47d4-8513-4c6546fbb5d7',
+  keyword: 'key_b36c4b9a-a010-4e6c-92c3-8711e79fce53',
+  answer: '__call_action__',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: '9146bdae14446f652aa715a59b5ffe11'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_8a8663b9-8878-4dba-9428-1068b3bd3ed5',
+  keyword: 'ans_0a9780a0-a6da-47d4-8513-4c6546fbb5d7',
+  answer: '__capture_only_intended__',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: '3dce3a4e5cd9d1f7d1f99092d5cc64e0'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '573135531984@s.whatsapp.net',
+    fromMe: false,
+    id: '3A1C0F253BA3DB7C89A6',
+    participant: undefined
+  },
+  messageTimestamp: 1706463988,
+  pushName: 'Juan José Naranjo',
+  broadcast: false,
+  message: Message {
+    conversation: '1',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: '1',
+  from: '573135531984'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '573135531984@s.whatsapp.net',
+    fromMe: false,
+    id: '3A13104CA9C058AB5EEA',
+    participant: undefined
+  },
+  messageTimestamp: 1706464017,
+  pushName: 'Juan José Naranjo',
+  broadcast: false,
+  message: Message {
+    conversation: 'Juan José',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'Juan José',
+  from: '573135531984'
 }

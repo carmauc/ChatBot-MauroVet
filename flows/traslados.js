@@ -18,5 +18,7 @@ module.exports = addKeyword(EVENTS.ACTION)
                           switch (opcion) {
                             case 1: return gotoFlow(cotizacion);
                             case 2: return gotoFlow(requisitos);
+                            default: return gotoFlow(require("./traslados"));
+
                             }
             })

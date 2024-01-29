@@ -4,9 +4,9 @@ const traslados = require("./traslados");
 const requisitos = require("./requisitos");
 const filtro = require("./filtro");
 
-module.exports = addKeyword(EVENTS.ACTION)
+module.exports = addKeyword(EVENTS.ACTION,  'Viajes Mascotas')
     .addAction(async (_, { flowDynamic }) => {
-    await flowDynamic('¡ Por favor selecciona una opción 👇\n\n *1.* Requisitos y Documentación para viajes de Mascotas 📃\n\n *2.* Traslados 🛫\n\n *3.* Apoyo Emocional 🐕‍🦺\n\n *4.* Adquirir un servicio 👨‍💻\n\n *5.* Volver al Menú Principal ⬅️');
+    await flowDynamic('¡ Por favor escoge un *Número* 👇\n\n *1.* Requisitos y Documentación para viajes de Mascotas 📃\n\n *2.* Traslados 🛫\n\n *3.* Apoyo Emocional 🐕‍🦺\n\n *4.* Adquirir un servicio 👨‍💻\n\n *5.* Volver al Menú Principal ⬅️');
     })
     .addAction({ capture: true }, async (ctx, { fallBack, gotoFlow }) => {
       const opcion = parseInt(ctx.body);
@@ -16,7 +16,7 @@ module.exports = addKeyword(EVENTS.ACTION)
         case 3: return gotoFlow(apoyo);
         case 4: return gotoFlow(filtro);
         case 5: return gotoFlow(require("./flowPrincipal"));
-        default: return fallBack();
+        default: return gotoFlow(require("./flowviajes"));
       }
     },
     );

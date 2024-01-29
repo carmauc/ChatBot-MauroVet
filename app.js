@@ -5,9 +5,7 @@ const { createReadStream } = require("fs");
 const { createBot, createProvider, createFlow, addKeyword, EVENTS, } = require('@bot-whatsapp/bot')
 const QRPortalWeb = require('@bot-whatsapp/portal')
 const BaileysProvider = require('@bot-whatsapp/provider/baileys')
-
 const MockAdapter = require('@bot-whatsapp/database/mock')
-
 const { delay } = require('@whiskeysockets/baileys')
 const agente = require('./flows/agente')
 const flowPrincipal = require('./flows/flowPrincipal')
@@ -56,7 +54,6 @@ const app = express();
             host: process.env.REDIS_HOST || 'roundhouse.proxy.rlwy.net',
             port: process.env.REDIS_PORT || 21112,
             password: '2fckLcMMPfmMeLH3Ckb3h3gA5npfDg3b'
-            // Puedes agregar más opciones según sea necesario
           };
 
 const main = async () => {
@@ -101,9 +98,9 @@ const main = async () => {
 
 ///////
     const PORT = process.env.PORT || 4000;
-    app.listen(PORT, () => console.log(`http://localhost:${PORT}`));
+//     app.listen(PORT, () => console.log(`http://localhost:${PORT}`));
 
-
+    // QRPortalWeb()
 
 
   };

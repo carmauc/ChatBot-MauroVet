@@ -15,6 +15,7 @@ module.exports = addKeyword(EVENTS.ACTION)
                     return gotoFlow(require("./flowPrincipal"));
                 }
                 else {
-                    return fallback()
+                    return gotoFlow(require("./horario"));
+
                 }
             })

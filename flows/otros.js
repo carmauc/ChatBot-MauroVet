@@ -16,7 +16,7 @@ module.exports = addKeyword(EVENTS.ACTION)
             case 2: return gotoFlow(servicios);
             case 3: return gotoFlow(filtro);
             case 4: return gotoFlow(require("./flowPrincipal"));
-            default: return fallBack();
-      }
+            default: return gotoFlow(require("./otros"));
+          }
     },
     );

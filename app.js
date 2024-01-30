@@ -77,9 +77,6 @@ const main = async () => {
     }
     );
 
-
-
-    // QRPortalWeb()
     app.get("/qr", async (_, res) => {
       const YOUR_PATH_QR = join(process.cwd(), `bot.qr.png`);
       const fileStream = createReadStream(YOUR_PATH_QR);
@@ -88,23 +85,20 @@ const main = async () => {
       fileStream.pipe(res);
     });
   
-  // Crea una cola llamada 'myQueue'
   const myQueue = new Queue('myQueue', {
     redis: redisConfig,
   });
 
-  // Ejemplo: Agrega una tarea a la cola
-  myQueue.add({ data: 'Ejemplo de tarea' });
+  myQueue.process(async (job) => {
+    console.log(`Processing task: ${job.data.message}`);
+    await processMessageInBackground(job.data.message, bot);
+  });
 
-///////
+  myQueue.on('error', (error) => {
+    console.error(`Queue error: ${error.message}`);
+  });
+
     const PORT = process.env.PORT || 4000;
     app.listen(PORT, () => console.log(`http://localhost:${PORT}`));
-
-
-
   };
-
-
-  
-
 main();

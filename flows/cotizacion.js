@@ -14,23 +14,7 @@ module.exports = addKeyword(EVENTS.ACTION)
 
 .addAnswer(
     [
-          'Para cotizar el traslado de la mascota debes tener los siguientes datos:\n\n', 
-          '🔹 Nombre Completo (Cliente)',    
-          '🔹 Ciudad y País de origen',
-          '🔹 Ciudad y País de destino',
-          '🔹 Nombre de la Mascota',
-          '🔹 Cantidad de Mascotas',
-          '🔹 Especie',
-          '🔹 Raza',
-          '🔹 Sexo',
-          '🔹 Edad',
-          '🔹 Peso',
-          '🔹 Talla (Pequeño, Mediano, Grande)',
-          '🔹 Medidas Alto (suelo a la cabeza)',
-          '🔹 Medias Largo (punta de nariz a la base de la cola)',
-          '🔹 Cuenta con serologia (Si o No)',
-          '🔹 Antecedentes médicos importantes\n\n\n',
-          '*Es importante que envíes la información completa al chat con nuestro asesor en cuanto estemos disponibles le atenderemos 😁🐾*'
+          'Para cotizar el traslado de la mascota debes contar con las medidas A y D\n', 
         ],
         {media: 'https://i.imgur.com/ovHbq5J.jpg'},
         null,
@@ -43,7 +27,7 @@ module.exports = addKeyword(EVENTS.ACTION)
                   switch (opcion) {
                     case 1: 
                     await state.update({ country: 'Traslado'});
-                    await state.update({ mensaje: 'Buena dia, en un momento estaré con usted. Recuerda compartirnos los datos para el traslado por este chat.'});
+                    // await state.update({ mensaje: 'Buena dia, en un momento estaré con usted. Recuerda compartirnos los datos para el traslado por este chat.'});
                     return gotoFlow(agente);
                     case 2: return gotoFlow(require("./flowPrincipal"));
         }
